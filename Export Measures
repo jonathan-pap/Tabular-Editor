@@ -1,0 +1,15 @@
+// Export all measures and save to txt
+
+string result = "";
+string newLine = "\r\n";
+string measureSeparator = "=============================================";
+
+foreach(Table t in Model.Tables){
+    foreach(Measure m in t.Measures){
+       result = result + measureSeparator + newLine + m.DaxObjectName; 
+       result = result + newLine + measureSeparator + newLine;
+       result = result + m.Expression + newLine + newLine;
+    }
+}
+
+SaveFile("<SAVE PATH>\\My Measures.txt", result.ToString());
