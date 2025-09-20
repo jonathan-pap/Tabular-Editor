@@ -1,4 +1,4 @@
-<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+// Format all measurs in your model
 
 FormatDax(Model.AllMeasures, true);
 foreach (var m in Model.AllMeasures)
